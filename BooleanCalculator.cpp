@@ -64,7 +64,7 @@ int main() {
 	std::cout << KDNDZ(truthVector, x, y, z)<< std::endl;
 	std::cout << "\npolynomial of Zhegalkin\n";
 	std::cout << jegalkin(truthVector) << std::endl;	
-}
+	}
 
 void put(bool x, bool y, bool z, std::string& s) {
 	for (auto& i : s) {
