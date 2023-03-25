@@ -27,9 +27,9 @@ Priority of operations `
 2. AND
 3. OR
 4. IMP
-5. other functions in order of their appearance
+5. Other functions in order of their appearance
 
-The parentheses nullify priority
+The parentheses nullify priority.
 Puting white spaces is okay.
 
 Example `
