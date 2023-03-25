@@ -28,7 +28,7 @@ int main() {
 	std::string s;
 	std::string truthVector;
 	do {
-		std::cout << "Input your function\n";
+		std::cout << " \033[33mInput your function\n \033[0m";
 		getline(std::cin, s);
 	} while(!checkParenthese(s));
 	s.erase(std::remove_if(s.begin(), s.end(), isspace), s.end());
@@ -40,29 +40,29 @@ int main() {
 		parenthes(sCopy);
 		truthVector += sCopy;
 	}
-	std::cout << "\nThe truth vector is\n\t";
+	std::cout << "\n\033[32mThe truth vector is\033[0m\n\t";
 	std::cout << truthVector << std::endl;
 	bool isXFictive = isXFake(truthVector);
 	bool isYFictive = isYFake(truthVector);
 	bool isZFictive = isZFake(truthVector);
-	std::cout << "\nVariable X is " << (isXFictive ? "significant\n" : "fictious\n"); 
-	std::cout << "Variable Y is " << (isYFictive ? "significant\n" : "fictious\n"); 
-	std::cout << "Variable Z is " << (isZFictive ? "significant\n" : "fictious\n"); 
+	std::cout << "\n\033[32mVariable X is \033[0m" << (isXFictive ? "\033[32msignificant\n" : "\033[32mfictious\n\033[0m"); 
+	std::cout << "\033[32mVariable Y is \033[0m" << (isYFictive ? "\033[32msignificant\n" : "fictious\\033[0mn"); 
+	std::cout << "\033[32mVariable Z is \033[0m" << (isZFictive ? "\033[32msignificant\n" : "fictious\n\033[0m"); 
 	if (!isXFictive && !isYFictive && !isZFictive) {
-		std::cout << "\nAll mebers are fictious\n";
+		std::cout << "\n\033[36mAll mebers are fictious\n";
 	}
 	else if (isXFictive && isYFictive && isZFictive) {
-		std::cout << "\nAll members are significant\n";
+		std::cout << "\033[36m\nAll members are significant\033[0m\n";
 	}
 	else {
-		std::cout << "\nFunction without fictious\n\t";
+		std::cout << "\n\033[32mFunction without fictious\n\\033[0mt";
 		std::cout << deleteingFictives(truthVector, x, y, z) << std::endl;
 	}
-	std::cout << "\nKKNDZ\n";
+	std::cout << "\n\033[32mPerfect conjuctive normal form\n\033[0m";
 	std::cout << KKNDZ(truthVector, x, y, z) << std::endl;
-	std::cout << "\nKDNDZ\n";
+	std::cout << "\n\033[32mPerfect disjunctive normal form\n\033[0m";
 	std::cout << KDNDZ(truthVector, x, y, z)<< std::endl;
-	std::cout << "\npolynomial of Zhegalkin\n";
+	std::cout << "\n\033[32mZhegalkin's polynomial\n\033[0m";
 	std::cout << jegalkin(truthVector) << std::endl;	
 	}
 
@@ -353,7 +353,7 @@ bool checkParenthese(const std::string& s) {
 		}
 	}
 	if (countL != countR) {
-		std::cout << "Count of '(' doesn't match with ')'\n";
+		std::cout << "\033[5;31mCount of '(' doesn't match with ')'\033[0m\n";
 		return false;
 	}
 	return true;
