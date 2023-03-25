@@ -46,8 +46,8 @@ int main() {
 	bool isYFictive = isYFake(truthVector);
 	bool isZFictive = isZFake(truthVector);
 	std::cout << "\n\033[32mVariable X is \033[0m" << (isXFictive ? "\033[32msignificant\n" : "\033[32mfictious\n\033[0m"); 
-	std::cout << "\033[32mVariable Y is \033[0m" << (isYFictive ? "\033[32msignificant\n" : "fictious\\033[0mn"); 
-	std::cout << "\033[32mVariable Z is \033[0m" << (isZFictive ? "\033[32msignificant\n" : "fictious\n\033[0m"); 
+	std::cout << "\033[32mVariable Y is \033[0m" << (isYFictive ? "\033[32msignificant\n" : "\033[32mfictious\\033[0mn"); 
+	std::cout << "\033[32mVariable Z is \033[0m" << (isZFictive ? "\033[32msignificant\n" : "\033[32mfictious\n\033[0m"); 
 	if (!isXFictive && !isYFictive && !isZFictive) {
 		std::cout << "\n\033[36mAll mebers are fictious\n";
 	}
